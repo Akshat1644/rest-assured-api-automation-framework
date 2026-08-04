@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-08-04T19:49:27 IST" name="Default suite" finished-at="2026-08-04T19:49:44 IST" duration-ms="16957">
+    <groups>
+    </groups>
+    <test started-at="2026-08-04T19:49:27 IST" name="Default test" finished-at="2026-08-04T19:49:44 IST" duration-ms="16957">
+      <class name="tests.AdvancedRestAssuredTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AdvancedRestAssuredTest@5bf0d49]" started-at="2026-08-04T19:49:27 IST" name="setup" finished-at="2026-08-04T19:49:28 IST" duration-ms="547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="deserializeBooking()[pri:0, instance:tests.AdvancedRestAssuredTest@5bf0d49]" started-at="2026-08-04T19:49:28 IST" name="deserializeBooking" finished-at="2026-08-04T19:49:33 IST" duration-ms="5087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deserializeBooking -->
+        <test-method signature="extractResponseData()[pri:0, instance:tests.AdvancedRestAssuredTest@5bf0d49]" started-at="2026-08-04T19:49:33 IST" name="extractResponseData" finished-at="2026-08-04T19:49:34 IST" duration-ms="1536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extractResponseData -->
+        <test-method signature="extractUsingJsonPath()[pri:0, instance:tests.AdvancedRestAssuredTest@5bf0d49]" started-at="2026-08-04T19:49:34 IST" name="extractUsingJsonPath" finished-at="2026-08-04T19:49:38 IST" duration-ms="3178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extractUsingJsonPath -->
+        <test-method signature="getBookingUsingPathParam()[pri:0, instance:tests.AdvancedRestAssuredTest@5bf0d49]" started-at="2026-08-04T19:49:38 IST" name="getBookingUsingPathParam" finished-at="2026-08-04T19:49:39 IST" duration-ms="1654" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookingUsingPathParam -->
+        <test-method signature="getBookingUsingQueryParam()[pri:0, instance:tests.AdvancedRestAssuredTest@5bf0d49]" started-at="2026-08-04T19:49:39 IST" name="getBookingUsingQueryParam" finished-at="2026-08-04T19:49:41 IST" duration-ms="1589" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookingUsingQueryParam -->
+        <test-method signature="validateHeaders()[pri:0, instance:tests.AdvancedRestAssuredTest@5bf0d49]" started-at="2026-08-04T19:49:41 IST" name="validateHeaders" finished-at="2026-08-04T19:49:42 IST" duration-ms="1590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHeaders -->
+        <test-method signature="validateResponseTime()[pri:0, instance:tests.AdvancedRestAssuredTest@5bf0d49]" started-at="2026-08-04T19:49:42 IST" name="validateResponseTime" finished-at="2026-08-04T19:49:44 IST" duration-ms="1676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateResponseTime -->
+      </class> <!-- tests.AdvancedRestAssuredTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
