@@ -30,9 +30,9 @@ public class GetBookingTest extends BaseTest {
 
     	.spec(ResponseSpec.responseSpecification())
 
-    	.body("firstname", equalTo("Akshat"))
+    	.body("firstname", equalTo("Mary"))
 
-    	.body("lastname", equalTo("Dahalwar"));
+    	.body("lastname", equalTo("Brown"));
     	
 
     }

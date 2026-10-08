@@ -23,7 +23,6 @@
 	        <groupId>org.testng</groupId>
 	        <artifactId>testng</artifactId>
 	        <version>7.11.0</version>
-	        <scope>test</scope>
 	    </dependency>
 	
 	    <!-- Hamcrest -->
@@ -31,7 +30,6 @@
 	        <groupId>org.hamcrest</groupId>
 	        <artifactId>hamcrest</artifactId>
 	        <version>3.0</version>
-	        <scope>test</scope>
 	    </dependency>
 	    
 	    <dependency>
