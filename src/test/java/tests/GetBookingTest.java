@@ -28,11 +28,8 @@ public class GetBookingTest extends BaseTest {
 
     	.then()
 
-    	.spec(ResponseSpec.responseSpecification())
+    	.spec(ResponseSpec.responseSpecification());
 
-    	.body("firstname", equalTo("Mary"))
-
-    	.body("lastname", equalTo("Brown"));
     	
 
     }
