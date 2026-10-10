@@ -1,6 +1,6 @@
 # 🚀 REST Assured API Automation Framework
 
-A scalable and reusable REST API Automation Framework built using **Java, Rest Assured, TestNG, and Maven**. The framework follows industry-standard design principles with a Service Layer, POJO-based request/response handling, reusable specifications, configuration management, and advanced API validations.
+A scalable and reusable REST API Automation Framework built using **Java, Rest Assured, TestNG, Maven and CI/CD**. The framework follows industry-standard design principles with a Service Layer, POJO-based request/response handling, reusable specifications, configuration management, and advanced API validations.
 
 ---
 
