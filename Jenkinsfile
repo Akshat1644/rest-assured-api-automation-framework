@@ -19,7 +19,13 @@ pipeline {
     post {
         always {
             junit 'target/surefire-reports/TEST-*.xml'
-            echo 'Jenkins pipeline execution completed.'
+
+            archiveArtifacts(
+                artifacts: 'target/surefire-reports/**',
+                allowEmptyArchive: true
+            )
+
+            echo 'Pipeline execution completed.'
         }
 
         success {
