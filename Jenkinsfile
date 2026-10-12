@@ -45,3 +45,7 @@ pipeline {
         }
     }
 }
+
+options {
+    skipDefaultCheckout(true)
+}
