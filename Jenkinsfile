@@ -8,6 +8,14 @@ pipeline {
                 checkout scm
             }
         }
+        
+		stage('Validate Project') {
+		    steps {
+		        bat 'if not exist pom.xml exit /b 1'
+		        bat 'if not exist Jenkinsfile exit /b 1'
+		        echo 'Required project files are present.'
+		    }
+		}
 
         stage('Build and Test') {
             steps {
