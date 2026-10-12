@@ -2,20 +2,24 @@
 pipeline {
     agent any
 
+    options {
+        skipDefaultCheckout(true)
+    }
+
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
             }
         }
-        
-		stage('Validate Project') {
-		    steps {
-		        bat 'if not exist pom.xml exit /b 1'
-		        bat 'if not exist Jenkinsfile exit /b 1'
-		        echo 'Required project files are present.'
-		    }
-		}
+
+        stage('Validate Project') {
+            steps {
+                bat 'if not exist pom.xml exit /b 1'
+                bat 'if not exist Jenkinsfile exit /b 1'
+                echo 'Required project files are present.'
+            }
+        }
 
         stage('Build and Test') {
             steps {
@@ -33,7 +37,7 @@ pipeline {
                 allowEmptyArchive: true
             )
 
-            echo 'Pipeline execution completed.'
+            echo 'Jenkins pipeline execution completed.'
         }
 
         success {
@@ -44,8 +48,4 @@ pipeline {
             echo 'Build or API automation tests failed. Check the console output.'
         }
     }
-}
-
-options {
-    skipDefaultCheckout(true)
 }
