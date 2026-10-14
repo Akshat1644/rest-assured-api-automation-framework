@@ -32,7 +32,7 @@ public class AdvancedRestAssuredTest extends BaseTest {
 
 	    System.out.println("First Name : " + booking.getFirstname());
 	    System.out.println("Last Name  : " + booking.getLastname());
-	    System.out.println("Price      : " + booking.getTotalprice());
+	    System.out.println("Total Price      : " + booking.getTotalprice());
 	    System.out.println("Deposit Paid : " + booking.isDepositpaid());
 	    System.out.println("Additional Needs : " + booking.getAdditionalneeds());
 	    
