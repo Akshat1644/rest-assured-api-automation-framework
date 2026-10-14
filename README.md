@@ -39,6 +39,7 @@ A scalable and reusable REST API Automation Framework built using **Java, Rest A
 | Hamcrest | Assertions |
 | Eclipse | IDE |
 | Git & GitHub | Version Control |
+| Jenkins | CI&CD |
 
 ---
 
