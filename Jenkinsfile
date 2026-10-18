@@ -28,24 +28,47 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            junit 'target/surefire-reports/TEST-*.xml'
+	post {
+	    always {
+	        junit 'target/surefire-reports/TEST-*.xml'
+	
+	        archiveArtifacts(
+	            artifacts: 'target/surefire-reports/**',
+	            allowEmptyArchive: true
+	        )
+	
+	        echo 'Jenkins pipeline execution completed.'
+	    }
+	
+	    success {
+	        echo 'API automation tests completed successfully!'
+	        emailext(
+	            subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+	            body: """
+	                <h2>Build Successful</h2>
+	                <p>Job: ${env.JOB_NAME}</p>
+	                <p>Build: #${env.BUILD_NUMBER}</p>
+	                <p>All API automation tests passed.</p>
+	                <p><a href="${env.BUILD_URL}">View Build Details</a></p>
+	            """,
+	            to: 'akshatdahalwar1234@gmail.com'
+	        )
+	    }
+	
+	    failure {
+	        echo 'Build or API automation tests failed. Check the console output.'
+	        emailext(
+	            subject: "FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+	            body: """
+	                <h2>Build Failed</h2>
+	                <p>Job: ${env.JOB_NAME}</p>
+	                <p>Build: #${env.BUILD_NUMBER}</p>
+	                <p>Please inspect the console output and test reports.</p>
+	                <p><a href="${env.BUILD_URL}console">View Console Output</a></p>
+	            """,
+	            to: 'akshatdahalwar1234@gmail.com'
+	        )
+	    }
+	}
 
-            archiveArtifacts(
-                artifacts: 'target/surefire-reports/**',
-                allowEmptyArchive: true
-            )
-
-            echo 'Jenkins pipeline execution completed.'
-        }
-
-        success {
-            echo 'API automation tests completed successfully!'
-        }
-
-        failure {
-            echo 'Build or API automation tests failed. Check the console output.'
-        }
-    }
 }
