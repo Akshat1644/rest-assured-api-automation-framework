@@ -42,17 +42,12 @@ pipeline {
 	
 	    success {
 	        echo 'API automation tests completed successfully!'
-	        emailext(
-	            subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-	            body: """
-	                <h2>Build Successful</h2>
-	                <p>Job: ${env.JOB_NAME}</p>
-	                <p>Build: #${env.BUILD_NUMBER}</p>
-	                <p>All API automation tests passed.</p>
-	                <p><a href="${env.BUILD_URL}">View Build Details</a></p>
-	            """,
-	            to: 'akshatdahalwar1234@gmail.com'
-	        )
+	       		emailext(
+					    to: 'akshatdahalwar1234@gmail.com',
+					    subject: "Jenkins Test - Build #${env.BUILD_NUMBER}",
+					    body: "Your API automation pipeline completed successfully.",
+					    mimeType: 'text/plain'
+					)
 	    }
 	
 	    failure {
